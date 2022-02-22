@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Juego del Ahorcado</title>
-    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="style.css">
   </head>
-  
   <body>
+    
     <div style="text-align:center; margin: 50px 0px;">
-      <h1 class="titulo">El juego del ahorcado</h1>
-      <button class="btn" id="iniciar-juego">JUGAR</button>
+      <h1 class="titulo">El Juego del Ahorcado</h1>
+      <button class="btn" id="iniciar-juego">A JUGAR</button>
     </div>
     <div style="text-align:center">
-      <input class="text-input" type="text" id="input-agregar-palabra" placeholder="Escriba una nueva palabra">
-      <button class="btn" id="agregar-palabra">AGREGAR PALABRA</button> 
+      <input onkeypress="return /[A-Z]/i.test(event.key)" maxlength="16" class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
+      <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
     </div>
     <div style="text-align:center;">
       <canvas id="ahorcado" height="800px" width="1200px"></canvas>
     </div>
     <div style="text-align:center">
-      <button class="btn" id="reiniciar-juego">VOLVER A JUGAR</button>
-    </div>"
+      <button class="btn" id="reiniciar-juego" >VOLVER A JUGAR</button>
+    </div>
+    <footer class="footer">
+      <p>Desarrollado por Lucho |  
+        <a href="mailto:lucianomjimenez@gmail.com"><img border="0" alt="lucianomjimenez@gmail.com" src="img/gmail.png" width="20" height="20"> </a>
+        <a href="https://github.com/luchojjimenez"><img border="0" alt="GitHub" src="img/git.png" width="20" height="20"></a>
+        <a href="https://www.linkedin.com/in/lucianomjimenez/"><img border="0" alt="GitHub" src="img/linkedin.png" width="20" height="20"></a>
+      </p>
+  </footer>
     <script type="text/javascript" src="canvas.js"></script>
     <script type="text/javascript" src="ahorcado.js"></script>
-
-    <div class="footer">
-        <p>Desarrollado por Luciano Jiménez</p>
-    </div>
-
   </body>
 </html>
